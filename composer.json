@@ -1,11 +1,11 @@
 {
-    "name": "sngrl/string-blade-compiler",
+    "name": "PeterMacko/string-blade-compiler",
     "description": "Render Blade templates from string variable",
     "keywords": ["laravel", "blade", "compiler", "string", "variable"],
     "license": "MIT",
     "authors": [
         {
-            "name": "sngrl"
+            "name": "Peter Macko & sngrl"
         }
     ],
     "require": {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-0": {
-            "sngrl\\StringBladeCompiler\\": "src/"
+            "PeterMacko\\StringBladeCompiler\\": "src/"
         }
     },
     "minimum-stability": "dev"
