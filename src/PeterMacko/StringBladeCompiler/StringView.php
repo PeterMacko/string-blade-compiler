@@ -1,22 +1,19 @@
 <?php namespace sngrl\StringBladeCompiler;
 
 use App, View, Closure, Config, ArrayAccess;
-use Illuminate\Support\MessageBag;
-use Illuminate\View\Engines\EngineInterface;
-use Illuminate\Support\Contracts\MessageProviderInterface;
 use Illuminate\Support\Contracts\ArrayableInterface as Arrayable;
-use Illuminate\Support\Contracts\RenderableInterface as Renderable;
+use Illuminate\Contracts\View\View as ViewContract;
 use sngrl\StringBladeCompiler\Compilers\StringBladeCompiler;
 use Illuminate\View\Engines\CompilerEngine;
 
 
-class StringView extends \Illuminate\View\View implements ArrayAccess, Renderable {
+class StringView extends \Illuminate\View\View implements ArrayAccess, ViewContract {
 
 	protected $template_field = 'template';
 
 	public function __construct()
 	{
-		$cache = App::make('path.storage').'/views';
+        $cache = Config::get("view.paths")[0];
 		$compiler = new StringBladeCompiler(App::make('files'), $cache);
 		$this->engine = new CompilerEngine($compiler);
 	}

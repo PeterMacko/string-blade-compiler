@@ -17,14 +17,14 @@ Require this package in your composer.json and run in your console composer upda
 ```php
 	"require": {
         /*** Some others packages ***/
-		"sngrl/string-blade-compiler": "dev-master",
+		"PeterMacko/string-blade-compiler": "dev-master",
 	},
 ```
 
 Or just run this in console:
 
 ```php
-composer require sngrl/string-blade-compiler:dev-master
+composer require PeterMacko/string-blade-compiler:dev-master
 ```
 
 After updating composer, add the ServiceProvider to the "providers" array in app/config/app.php:
@@ -32,7 +32,7 @@ After updating composer, add the ServiceProvider to the "providers" array in app
 ```php
 	'providers' => array(
         /*** Some others providers ***/
-        'sngrl\StringBladeCompiler\StringBladeCompilerServiceProvider',
+        PeterMacko\StringBladeCompiler\StringBladeCompilerServiceProvider::class,
     ),
 ```
 
