@@ -13,7 +13,7 @@ class StringView extends \Illuminate\View\View implements ArrayAccess, ViewContr
 
 	public function __construct()
 	{
-        $cache = Config::get("view.paths")[0];
+        $cache = storage_path('framework/views');
 		$compiler = new StringBladeCompiler(App::make('files'), $cache);
 		$this->engine = new CompilerEngine($compiler);
 	}
