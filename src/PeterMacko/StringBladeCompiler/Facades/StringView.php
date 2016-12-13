@@ -1,4 +1,4 @@
-<?php namespace sngrl\StringBladeCompiler\Facades;
+<?php namespace PeterMacko\StringBladeCompiler\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

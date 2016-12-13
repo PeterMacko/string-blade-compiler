@@ -1,4 +1,4 @@
-<?php namespace sngrl\StringBladeCompiler;
+<?php namespace PeterMacko\StringBladeCompiler;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,6 @@ class StringBladeCompilerServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('sngrl/string-blade-compiler');
 	}
 
 	/**
@@ -28,16 +27,16 @@ class StringBladeCompilerServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('stringview', 'sngrl\StringBladeCompiler\StringView');
+		$this->app->bind('stringview', 'PeterMacko\StringBladeCompiler\StringView');
 
-                /*
-               * This removes the need to add a facade in the config\app
-               */
-                $this->app->booting(function()
-                {
-                    $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-                    $loader->alias('StringView', 'sngrl\StringBladeCompiler\Facades\StringView');
-                });
+        /*
+        * This removes the need to add a facade in the config\app
+        */
+        $this->app->booting(function()
+        {
+            $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+            $loader->alias('StringView', 'PeterMacko\StringBladeCompiler\Facades\StringView');
+        });
 	}
 
 	/**

@@ -1,9 +1,9 @@
-<?php namespace sngrl\StringBladeCompiler;
+<?php namespace PeterMacko\StringBladeCompiler;
 
 use App, View, Closure, Config, ArrayAccess;
 use Illuminate\Support\Contracts\ArrayableInterface as Arrayable;
 use Illuminate\Contracts\View\View as ViewContract;
-use sngrl\StringBladeCompiler\Compilers\StringBladeCompiler;
+use PeterMacko\StringBladeCompiler\Compilers\StringBladeCompiler;
 use Illuminate\View\Engines\CompilerEngine;
 
 
